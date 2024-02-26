@@ -1,0 +1,56 @@
+package JAVA;
+
+public class Variable1 {
+	/*
+	*division 
+    * types of variables on values
+    * •primitive variables  	int x=10
+    * •reference variables   variable v=new variable();
+    * 
+    * types of variables on declaration and behaviour.
+    * 
+  *•  instance-stored in heap and it is created  when object created  till the object destroyed.
+  *    creates 600 instances for 600 objects .It is  not thread safe .JVM provide default value 
+  *    therefore not required initialization explicitly.
+  *    public,default ,private ,protected any can be used by instance
+  *    
+    * •static -stored in method area and created at the time of class loaded && destroyed at class unloaded.
+    * created once and shared by 600 objects . any change done using object will reflect for all objects.
+    * not thread safe . JVM provide default values therefore  not required initialization explicitly.
+    *  public,default ,private ,protected any can be used by instance
+    *  
+    * •local -stored in  the stack and scope is with in the block ,method ,constructor.threadsafe.
+    * JVM doesn't provide default value for local variables.required initialization explicitly.
+    * final speficier is used by local variables.
+    * 
+    * 
+    * 
+    */
+	    int a;
+	    static int b;
+		int x =10; // instance 
+	     static int y=111;// static 
+	
+	public static void main(String[] args) {
+		Variable1 v=new Variable1();
+		System.out.println(v.a +"default instance"); //default value
+		System.out.println(v.b +"default static"); //default value
+		System.out.println(Variable1.b );//recommended
+		System.out.println(v.x +" instance");
+		System.out.println(v.y +" static ");
+		System.out.println(Variable1.y);//recommended
+		System.out.println(v.a);
+		System.out.println(y);//can be accessed in same class
+		Variable1 v1=new Variable1();
+		Variable1 v2=new Variable1();
+		  v1.x=889;
+		  v1.y=900;
+		  System.out.println(v2.x +"...."+v2.y);//y changed for v2 because it points to static 
+		  
+		  int loc =10;//local variable recommended to be initialized at the time of declaration jVM not provide default values
+		  System.out.print(loc+" local");
+		  int loc2;
+		 // System.out.print(loc2+" local");//CE:The local variable loc2 may not have been initialized		  
+	}
+
+}
