@@ -1,0 +1,82 @@
+package JAVA;
+
+
+public class Varargsmethods {
+
+	/* •sum(10,20);sum(10,20,30);sum(10,20,30,40) 
+	 * for above examples we need 3 different sum methods. but by using var-args methods we dont need
+	 * different methods .
+	 *
+	 *•internally var-arg parameter will be coverted in 1-D array hence values of var-arg methods can be
+	 *accessed through index.
+	 * 
+	 * •case1:
+	 * m1(int...x)allowed
+	 * m1(int . . . x)allowed
+	 * m1(int .x..)not allowed
+	 * m1(int x...)not allowed
+	 * 
+	 * •case2:
+	 * m1(int x,int ...)allowed
+	 * m1(String s,double ...y)allowed
+	 * 
+	 * •case3:  while using normal parameter with var-arg parameters so var-args parameter should be at last
+	 * m1(double... d,String s)not allowed
+	 * m1(char ch ,String...s)allowed
+	 * 
+	 * •case 4:  only one var-arg parameter is allowed in var arg methods
+	 * m1(int...x,double...y)not allowed
+	 *
+	 *• case 5: same signature methods not allowed in same class as per OOPS(signature == function name + parameters (not return types)
+	 * p s v m1(int ...x); internally it is as m1(int[]x)
+	 * p s v m1(int[]x);
+	 *   as per case 5 not allowed because consider similar
+	 * 
+	 * var-arg parameter cant be replaced with array parameter but   
+	 * array parameter can be valid replaced by var -arg parameter.
+	 * 
+	 *  •equivalence
+	 *  m1(int...x)== m1(int[]x);
+	 *  m1(String ...x)== m1(String[]x);
+	 *  m1(int[]...x)== m1(int[][]x);
+	 *  m1(int[][]...x)=m1(int [][][]x);
+	 *  
+	 */
+	
+	
+	static  void sum(int... x) {
+    	 System.out.print( "var-arg method");
+    	 int total=0;
+    	 for(int x1:x) {
+    		 total=total+x1;
+    	 }
+    	 System.out.println( " sum:"+total);
+     }
+	
+	static void m1(int ...x) {
+		System.out.println("var-args M1");
+	}
+	
+	static void  m1(int x) {
+		System.out.println("general method m1");
+	}
+	static void fun(int []...x) {
+		for(int[]a:x) System.out.println(a[0]);
+	}
+	public static void main(String[] args) {
+	    sum();//allow no values also
+        sum(10);
+        sum(10,20);
+        sum(10,20,30);
+        
+        m1();
+        m1(10); //general have more priority and var args have least priority
+        m1(10,20);
+        
+       int a[]= {10,20,30};
+       int b[]= {40,50,60};
+       fun(a,b);
+        
+	}
+
+}
