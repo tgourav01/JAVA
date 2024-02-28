@@ -1,6 +1,6 @@
 package JAVA;
 
-public class Variable1 {
+public class Variable_4 {
 	/*
 	*division 
     * types of variables on values
@@ -28,29 +28,31 @@ public class Variable1 {
     */
 	    int a;
 	    static int b;
-		int x =10; // instance 
-	     static int y=111;// static 
+		int x =10; // instance primitive variable
+	     static int y=111;// static primitive variable
+	     String aa="abc"; // instance reference variable
 	
 	public static void main(String[] args) {
-		Variable1 v=new Variable1();
+		Variable_4 v=new Variable_4();
 		System.out.println(v.a +"default instance"); //default value
 		System.out.println(v.b +"default static"); //default value
-		System.out.println(Variable1.b );//recommended
+		System.out.println(Variable_4.b );//recommended
 		System.out.println(v.x +" instance");
 		System.out.println(v.y +" static ");
-		System.out.println(Variable1.y);//recommended
+		System.out.println(Variable_4.y);//recommended
 		System.out.println(v.a);
 		System.out.println(y);//can be accessed in same class
-		Variable1 v1=new Variable1();
-		Variable1 v2=new Variable1();
+		Variable_4 v1=new Variable_4();
+		Variable_4 v2=new Variable_4();
 		  v1.x=889;
 		  v1.y=900;
 		  System.out.println(v2.x +"...."+v2.y);//y changed for v2 because it points to static 
 		  
 		  int loc =10;//local variable recommended to be initialized at the time of declaration jVM not provide default values
 		  System.out.print(loc+" local");
-		  int loc2;
-		 // System.out.print(loc2+" local");//CE:The local variable loc2 may not have been initialized		  
+		  int loc2; 
+		 // System.out.print(loc2+" local");//CE:The local variable loc2 may not have been initialized	
+		  int l=10;//local primitive variable
 	}
 
 }
