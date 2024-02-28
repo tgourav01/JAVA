@@ -1,0 +1,61 @@
+package JAVA;
+
+public class Main_14 {
+
+	/*
+	 * •whether the class contains main() method or not this won"t checked by compiler but
+	 * at runtime JVM is responsible to check these things.
+	 * 
+	 * •JVM{
+	 * p s v main(String[] args) 
+	 * }
+	 * At runtime JVM always search for main() with the above prototype
+	 * 
+	 * •public==to call by JVM from anywhere 
+	 * •static == without existing object also JVM has to call the method
+	 * •void == won"t return anything to JVM 
+	 * •main== this is the name which is configured in JVM
+	 *
+	 *the syntax is very strict but the following changes are allowed
+	 *
+	 * •instead of public static ==static public is allowed (in JAVA order of modifier is not important)
+	 * •main(String []args),main(String args[]), main(String    [] args) ,main(String durga[]);
+	 * •main(String ...args);
+	 * 
+	 * •static final synchronized strictfp public void main(String...args) is  totally valid.
+	 * 
+	 * INHERITANCE ,OVERLOADING is applicable but OVERRIDING doesn't instead of it METHOD HIDING is done.  
+	 */
+	
+	
+	  ///////HERE ARE SOME CASES OF MAIN METHOD/////////////
+	  
+	/*  CASE-1
+	 * •overloading is allowed but JVM always pick (String[] args)
+	other have to be called explicitly  like normal method call.*/
+	
+	public static void main(String[] args) {
+		System.out.println("String main of parent");
+
+	}
+	public static void main(int []args) {
+		System.out.println("int main of parent");
+	}
+} /*CASE -2 
+     inheritance concept is applicable for main method*/
+
+     class C extends Main_14{
+    	
+    	 //java main output= parent main()
+    	 // java c output= parent main()
+     }
+     /*CASE-3
+      * • It seems overriding is executing but its not overriding its called METHOD HIDING 
+      * */
+     class t extends Main_14{
+    	 public static void main(String []args) {
+    		 System.out.println("child main");
+    	 }
+    	 //java main output==parent main();
+    	 //java t output==child main();
+     }
