@@ -29,7 +29,11 @@ public class Main_14 {
 	
 	
 	  ///////HERE ARE SOME CASES OF MAIN METHOD/////////////
-	  
+
+	  static {//it only execute if main () is present because of enhancement in 1.7v 
+		System.out.println(" normal flow static block before main only if main() exists ");
+		}
+
 	/*  CASE-1
 	 * •overloading is allowed but JVM always pick (String[] args)
 	other have to be called explicitly  like normal method call.*/
