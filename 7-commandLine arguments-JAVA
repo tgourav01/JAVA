@@ -1,0 +1,23 @@
+package JAVA;
+
+public class Command_line_args_7 {
+/*
+ * • the arguments which are  are passed from command prompt is called command line argument.
+ * with these command line arguments JVM will create an array and passing that array as argument
+ *  JVM will call main (). for e.g JAVA TEST A B C
+ *   
+ *  •the objective of command line args is we can customize behaviour of the main().
+ *  
+ *  •within main() command line args are passed in string form. so args[0]+args[1] will perform string concat
+ *
+ *	•usually space is the separator between command line args .if our command line arg contains space 
+ *then we  have to enclose that arg in "". for eg JAVA TEST " BOOK   STORE"
+ */
+	public static void main(String[] args) {
+		
+      String argh[]= {"a","b","c"};
+      args=argh;
+      for(String s:args)System.out.println(s);
+	}
+
+}
