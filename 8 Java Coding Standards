@@ -1,0 +1,109 @@
+package JAVA;
+
+public class JavaCoidngStandards_8 {
+
+	/*
+	 * recommended to follow the coding standards
+	 * every name should reflect its purpose/functionality
+	 * this helps in code readability and maintainability
+	 * 
+	 *			////CODING STANDARDS////
+	 *
+	 *  •For classes: class names are nouns ,should start with capital letter and if contains multiple words
+	 *  then every inner word starts with capital letter for eg. String ,StringBuffer,Dog ,Account.
+	 *  
+	 *  •for interfaces: interface names are adjectives should start with capital letter and if contains multiple words
+	 *  then every inner word starts with capital letter for eg. Runnable,Comparable .
+	 *  
+	 *  •for methods():methods names are verbs or verb-noun combinations starts with lower letter and if contains multiple words
+	 *  then every inner word starts with capital letter for eg. print(),sleep(),eat(),getName(),setName().
+	 *  
+	 *  •for variables: variable names are nouns.starts with lower letter and if contains multiple words
+	 *  then every inner word starts with capital letter for eg. name ,age,mobileNumber.
+	 *  
+	 *  •for constants:constant names are nouns.Should contain only Capital letters and if any contains multiple
+	 *  words the words are separated by underscore symbol  _ for eg. MAX_VALUE,MIN_VALUE,MAX_PRIORITY
+	 *  
+	 */
+      					//THIS IS NOT RECOMMENDED
+	class A{
+		public int m1(int x,int y) {
+		return x+y;}
+	}
+						//GOOD RECOMMENDED PRACTICE
+	
+	 public class Calculator{
+		 public static int add(int number1,int number2) {
+			 return number1+number2;
+		 }
+	 }
+	/*
+	 * 1. A.m1,A.m2,A.m3 
+	 * 2. Math.max,Math.min,Math.sqrt 
+	 * of course the second option is more readable 
+	 */
+	 			       
+	 						//////JAVA BEANS//////
+	 
+	 /*
+	  * JAVA beans are simple classes with private properties and public getter setter methods
+	  * class name ends with bean is not official convention or necessary.
+	  */
+	  public class StudentBean{
+		  
+		  private String name;
+		  private boolean empty;
+		  
+		  //SET ():its should be public ,return type should be void ,and name prefixed with set and //
+		 // should  not be No  arguments //
+		  
+		  public void setName(String name) {
+			  
+			  this.name=name;
+		  }
+		  //GET(): should be public,return type should not be void ,should no have arguments.
+		 // x prefixed  with get//
+		  
+		  public String getName() {
+			  return name;
+		  }
+		  //BOOLEAN GET(): it is recommended to use IS instead of GET//
+		  
+		  public boolean isEmpty() {
+			  return empty;
+		  }
+	  }
+	 		
+	  				///LISTENERS////
+	  
+	  /*
+	   * •REGISTER LISTENER:should be prefixed with add only.
+	  
+		  public void addMyActionListener(MyActionListener l) {
+		   valid;
+	  }
+	  public void registerMyActionListener(MyActionListener l) {
+		  not valid;
+	  }
+	  public void addMyActionListener(ActionListener l) {
+		  not valid;
+	  }
+	  
+	  
+	  UN-REGISTER LISTENER:should be prefixed with remove only.
+	  
+	  public void removeMyActionListener(MyActionListener l) {
+	   valid;
+  }
+  public void unregisterMyActionListener(MyActionListener l) {
+	  not valid;
+  }
+  public void removeMyActionListener(ActionListener l) {
+	  not valid;
+	  }
+	  
+	   public void deleteMyActionListener(MyActionListener l) {
+	    not valid;
+  }
+  }*/
+}
