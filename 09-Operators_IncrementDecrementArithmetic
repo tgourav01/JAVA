@@ -1,22 +1,22 @@
 package JAVA;
 
-public class Operators_IncrementDecrementArithmetic_9 {
+public class Operators_9IncrementDecrementArithmetic {
 
 	
 	
 	public static void main(String[] args) {
-		//INCREMENT AND DECREMENT OPERATORS ARE OF TWO TYPES POSTFIX AND PREFIX
+		//INCREMENT(++) AND DECREMENT(--) OPERATORS ARE OF TWO TYPES POSTFIX AND PREFIX
 		
 		int x=10;
 		 int y=x++;
-		 System.out.println(y +"postfix increment");
+		 System.out.println(y +"postfix increment");//10
 		  y=++x;
-		 System.out.println(y+"prefix increment");
+		 System.out.println(y+"prefix increment");//12
 		 int a=20;
 		 int b=a--;
-		 System.out.println(b+"postfix decrement");
+		 System.out.println(b+"postfix decrement");//20
 		  b=--a;
-		 System.out.println(b+"prefix decrement");
+		 System.out.println(b+"prefix decrement");//18
 		  
 		 //•CASE 1:
 		/*Increment/decrement  operators are applied only on variables not on constants
@@ -44,10 +44,10 @@ public class Operators_IncrementDecrementArithmetic_9 {
 		 
 		 char ch='a';
 		 ch++;
-		 System.out.println(ch);
+		 System.out.println(ch);//b
 		 double d=10.5;
 		 d++;
-		 System.out.println(d);
+		 System.out.println(d);//11.5
 		 
 		 //CASE 6:Difference between b++ and b=b+1
 		 /* •if we apply  arithmetic operator b/w two variables a and b its result type is always
@@ -56,11 +56,11 @@ public class Operators_IncrementDecrementArithmetic_9 {
 		  byte m=10;
 		  byte n=20;
 		  byte o=(byte)(m+n); //without type  casting it will give CE: found int required byte
-		  System.out.println(o);
+		  System.out.println(o);// 30
 		  m++;//internal type casting happened automatically
-		  System.out.println(m);
+		  System.out.println(m);//11
 		  	
-		  /////////////-----ARITHMETIC OPERATORS--------///////////////
+		  /////////////-----ARITHMETIC OPERATORS(+,-,*,/,%)-------///////////////
 		  /* •if we apply  arithmetic operator b/w two variables a and b its result type is always
 			  * MAX(int,type of a,type of b)
 			  * therefore :
@@ -75,12 +75,14 @@ public class Operators_IncrementDecrementArithmetic_9 {
 		       byte xx=10;
 		       long yy=20;
 		       long zz=xx+yy;
-		       System.out.println(zz + "  byte +long =long");
+		       System.out.println(zz + "  byte +long =long");//30
 		       char q='a';
 		       char r='b';
 		       int s=q+r;
-		       System.out.println(s + "  char+char =int ");
-		       System.out.println(q+1.55f +"char +float=float");
+		       char cc=(char)s;//typecasted 
+		       System.out.println(cc);
+		       System.out.println(s + "  char+char =int ");//195
+		       System.out.println(q+1.55f +"char +float=float");//98.55
 		  
 		     //CASE 1:INFINITY
 		       /* 
@@ -107,14 +109,14 @@ public class Operators_IncrementDecrementArithmetic_9 {
 		     
 		       //  •Nan LOOPHOLES://
 		       
-		       System.out.println(10<Float.NaN);
-		       System.out.println(10<=Float.NaN);
-		       System.out.println(10>Float.NaN);
-		       System.out.println(10>=Float.NaN);
-		       System.out.println(10==Float.NaN);
-		       System.out.println(Float.NaN==Float.NaN);
-		       System.out.println(10!=Float.NaN);
-		       System.out.println(Float.NaN!=Float.NaN);
+		       System.out.println(10<Float.NaN);//false
+		       System.out.println(10<=Float.NaN);//false
+		       System.out.println(10>Float.NaN);//false
+		       System.out.println(10>=Float.NaN);//false
+		       System.out.println(10==Float.NaN);//false
+		       System.out.println(Float.NaN==Float.NaN);//false
+		       System.out.println(10!=Float.NaN);//true
+		       System.out.println(Float.NaN!=Float.NaN);//ture
 		       
 		      //CONCLUSION ON ARITHMETIC EXCEPTION
 		     // •It is runtime exception not compile time error.
