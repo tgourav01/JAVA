@@ -1,0 +1,107 @@
+package JAVA;
+
+public class Operators_10ConcatenationRelationalEquality {
+
+	
+	public static void main(String[] args) {
+					
+					//STRING CONCATENATION//
+		/*
+		 * The only overloaded operator in java is +operator.sometime it acts like
+		 * arithmetic operator addition and sometimes acts String Concatenation operator
+		 * 
+		 */
+		String a="durga";
+		int b=10,c=20,d=30;
+		System.out.println(a+b+c+d);//durga102030
+		System.out.println(b+c+d+a);//60durga
+		System.out.println(b+c+a+d);//30durga30
+		System.out.println(b+a+c+d);//10durga2030
+			
+		//if at least any argument or operand is String type it acts as String concatenation 
+		
+		//a=b+c+d; CE:incomparable types found int required java.lang.string 
+		//a=a+b+c;		valid
+		//b=a+c+d;CE:incomparable types found java.lang.String  required int 
+		//b=b+c+d;		valid 
+		
+				////RELATIONAL  && EQUALITY OEPRATORS(<,>,<=,>=,==,!=)//////
+		
+		System.out.println("RELATIONAL OPERATORS");
+		//• 1 RELATIONAL OPERATORS:
+		
+		//CASE1:  REALTIONAL ON PRIMITIVE DATATYPES
+		
+		//we can apply relational operator for every primitive type except boolean
+		
+		System.out.println(10<20);//true;
+		System.out.println('a'<10);//false;
+		System.out.println('a'<97.6);//true;
+		System.out.println('a'<'A');//false;
+		
+		//System.out.println(true>false) ;CE:operator can not  be applied to boolean,boolean
+		
+		//CASE2:RELATIONAL ON OBJECT TYPES
+		
+		//can't apply relational operator on object types
+		//System.out.println("durga"<"durga");CE:operator < can not be applied on string,string
+		
+		//CASE 3:NESTING  of Relational operators is not allowed
+		
+		System.out.println(10<20);//true;
+		
+	//	System.out.println(10<20<30); (true<30)CE:operator can not be applied on boolean ,int
+		
+		System.out.println("EQUALITY OPERATORS");
+		
+		//2.EQUALITY OPERATORS(==,!=)
+		
+		//CASE-1:PRIMITIVE TYPES :
+		//we can apply equality operator for every primitive including boolean type also
+		
+		System.out.println(10==20);//false
+		System.out.println('a'=='b');//false
+		System.out.println('a'==97.0);//true;
+		System.out.println(false==false);//true
+		
+		//CASE2:OBJECT TYPES:
+		//we can apply equality operators on object types
+		//r1==r2 (true)only if both reference to same object (same address)otherwise false
+		
+		Thread t1=new Thread();
+		Thread t2=new Thread();
+		Thread t3=t1;
+		System.out.println(t1==t2);//false
+		System.out.println(t1==t3);//true
+		
+		//if we apply equality operator for object type there should compulsory  have some relation
+		//b/w arguments(child->parent or parent->child) other wise we will get CE:Incomparable types
+		
+		Thread t=new Thread();
+		Object o=new Object();
+		String s=new String("durga");
+		
+		System.out.println(t==o); //false
+		System.out.println(o==t);//false
+		//System.out.println(t==s);//CE:incomparable types because no relation b/w o and t
+		
+		//////////DIFFERENCE BETWEEN == AND .EQUALS()///////////
+		// • == Operator compares the reference /address 
+		// • .euqals method compares the value/content
+		
+		String str1=new String("durga");
+		String str2=new String ("durga");
+		System.out.println(str1==str2);//false
+		System.out.println(str1.equals(str2));//true;
+		
+		//•for any object r
+		//r==null is always false but null==null is always true;
+		String str=new String("durga");
+		String r=null;
+		System.out.println(str==null);//false;
+		System.out.println(r==null);//true;
+		System.out.println(null==null);//true
+		
+	}
+
+}
