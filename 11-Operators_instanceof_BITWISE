@@ -1,0 +1,76 @@
+package JAVA;
+
+public class Operators_11InstanceofBitwise {
+
+	public static void main(String[] args) {
+	
+		/////instanceof OPERATOR////
+	
+		//we can use instanceof operator to check whether the given object is of particylar
+		//type of not
+		
+         /*
+          * for eg.
+          * Object o=l.get(0);
+          * if(o instanceof Student){
+          * Student s=(Student)o;
+          *  //student specific task
+          * }
+          * else if(o instanceof Customer){
+          * Customer c=(Customer)o;
+          * perform student specific task
+          *  }
+          *  SYNTAX:
+          *  r instance X where r= object refrence and X is class/interface name
+          *  
+          */
+		    //CASE1:
+		
+		    Thread t=new Thread();
+		    System.out.println( t instanceof Thread);//true
+		    System.out.println( t instanceof Object);//true
+		    System.out.println( t instanceof Runnable);//true
+		    
+		    //CASE2:There should be some relationship in arguments types .(child->parent ,vice versa or same types)
+		   // System.out.println(t instanceof String);//CE:inconvertible types found thread required STring
+		   
+		    //CASE 3:
+		    System.out.println(null instanceof Thread);//false
+		    System.out.println(null instanceof Runnable);//false
+		    
+		    
+		   ///////BITWISE OPERATORS(&,|,^,~,<<,>>) 
+		   
+		    //	&:AND return true if both are true;
+		    //	|:OR return ture if any of argument or operand is true;
+		    //	^:X-OR return true when both arguments are different 
+		    
+		    System.out.println(true & false);//false
+		    System.out.println(true |false);//true;
+		    System.out.println(true ^false);//true
+		    System.out.println(true^ true);//false
+		    
+		    System.out.println(4&5);//4
+		    System.out.println(4|5);//5
+		    System.out.println(4^5);//1
+		    
+		    //these can be applied on both  boolean and integral types
+		    
+		    ///BITWISE COMPLIMENT(~)//
+		   //this operator is only applicable on integral types
+		    
+		    
+		  //  System.out.println(~true);CE: operator ~cant be applied  to boolean
+		    System.out.println(~4);//-5
+		    
+		    
+		    //BOOLEAN COMPLIMENT (!)//
+		    //this operator is only applicable on boolean types
+		    
+		   // System.out.println(!4);CE:operator ! can not be applied to int 
+		    System.out.println(!true);//false
+		    
+		    
+	}
+
+}
