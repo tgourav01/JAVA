@@ -1,0 +1,41 @@
+public class Operators_12TypeCasting {
+	
+	public static void main(String[] args) {
+		//   IMPLICIT TYPECASTING 
+		// •it is done by the compiler
+		//•whenever we assign smaller data type value to bigger data type variable
+		//•also know as upcasting 
+		// • there is no loss of information
+		
+		int x='a';
+		System.out.println(x);//97
+		
+		double d=10;
+		System.out.println(d);//10.0
+		
+		//EXPLICIT TYPE CASTING
+		// •it is done by the programmer
+		//•whenever we assign bigger data type value to smaller data type variable 
+		//•also know as downcasting
+		// • there may be  loss of information
+
+		int a=130;
+		// byte b=a; CE:type mismatch
+		byte b=(byte)a;//explicit typecasting
+		System.out.println(b);
+		
+		short ss=(short)a;
+		System.out.println(ss);//no loss because its in range
+		
+		double dd=130.556;
+		int i=(int)dd;
+		byte bb =(byte)dd;
+		
+		System.out.println(i);
+		System.out.println(bb);
+		
+		bb=(byte)150;
+		System.out.println(bb);
+	}
+
+}
