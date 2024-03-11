@@ -1,0 +1,62 @@
+package JAVA;
+
+public class operators_12ShortcircuitLogical {
+		
+	///SHORt CIRCUIT OR LOGICAL OPERSTORS
+	 //bitwise & | are applicable on boolean and integral types where logical are only on boolean types
+	//because of it performance of bitwise is low as compared to logical
+	//& | both are evaluated  where as in && || second is optional based on first evaluation
+  
+	//X&&Y :Y will be evaluated iff x is true and if x is false y wont be evaluated.
+	
+	//X||Y:Y will be evaluated iff  x is false and if x is true y is not evaluated.
+	
+	public static void main(String[] args) {
+			
+		int x=10;
+		int y=15;
+		if(++x <10 & ++y>15)//+xx and ++y evaluated 
+			x++; 
+		else 
+			y++;    
+		System.out.println(x+"...... "+y);
+		
+		x=10;
+		y=15;
+		if(++x <10 && ++y>15)//only ++x is evaluated  
+			x++;
+		else
+			y++;
+		System.out.println(x+"...... "+y);//11.... 16
+		
+		
+		x=10;
+		y=15;
+		if(++x <10 | ++y>15)//both are evaluated
+			x++;
+		else 
+			y++;
+		System.out.println(x+"...... "+y);//12...16
+		
+		x=10;
+		y=15;
+		
+		if(++x <10 || ++y>15)//both are evaluated
+			x++;
+		else 
+			y++;
+		System.out.println(x+"...... "+y);//12.... 16
+		
+	      
+		CASE 2:
+			
+		if(++x <10 && (x/0>10))
+		//NO ARITHMETIC EXCEPTION BEACUSE FIRST CONDITION FALSE SO SECOND DID NOT EXECUTED
+	    	  System.out.println("hi");
+	      else 
+	    	  System.out.println("hello");//executed
+	
+	}
+	
+
+}
