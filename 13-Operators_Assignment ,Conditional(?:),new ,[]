@@ -1,0 +1,59 @@
+package JAVA;
+
+public class Operators_13AssignmetConditionNew {
+
+	public static void main(String[] args) {
+		///ASSIGNMENT OPERATOR
+		//•CASE 1:simple
+		int x=10;
+		
+		//CASE2:chained
+		
+		int a,b,c,d;
+		a=b=c=d=20;
+		System.out.println(a+".."+b+".."+c+".."+d);//20,20,20,20
+		
+		// int p=q=r=10;can not find symbol q,r;
+		
+		//•CASE 3:compound
+		int z=10;
+		z+=10;
+		System.out.println(z);//20
+		
+		byte m=10;
+		m+=1; //m=(byte)m+1;
+		System.out.println(m); //implicit typecasting  
+		
+		a+=b-=c*=d/=2;//right to left evaluation 
+		System.out.println(a+".."+b+".."+c+".."+d);//  -160..-180..20..10
+		
+		
+		//CONDITIONAL OPERATOR OR TERNARY OPERtAOR (?:)
+		 
+		int xx=10<20?111:222;
+		 System.out.println(xx);//111
+		 
+		 //nesting of ternary operator is allowed
+		 int zz=(10>20)?111:(20>50?222:333);
+		 System.out.println(zz);//333
+	}
+	   					
+					//NEW OPERTAOR
+	
+		Test t=new Test();
+	// •its is used to create object
+	
+	//• constructor is executed after object creation to perform initialization 
+	//constructor is not used for object creation 
+	
+	//•I JAVA we have only  new keyword to create object but not delete keyword for destruction of
+	//object because it is responsibility of garbage collector 
+	
+					//[] operator
+		
+         int xxx[]=new int[20];
+         //we can use [] operator to create  or and declare arrays.
+         
+	
+
+}
