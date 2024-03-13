@@ -1,0 +1,60 @@
+package JAVA;
+
+public class Operators_14OperatorOperandPrecedence {
+
+	public static void main(String[] args) {
+		/*
+		 *  
+		 *  1.Unary Operators///////////////////
+		 *  
+		 *  [],x++,x--
+		 *  ++x,-xx,~,!
+		 *  new,<type>
+		 *  
+		 *  2.Arithmetic Operators////////////////
+		 *  
+		 *  *,/,%
+		 *  +,-
+		 *  
+		 *  3.shift operators///////////////////
+		 *  
+		 *  >>,<<<,<<
+		 *  
+		 *  4.comparison operators//////////////
+		 *  
+		 *  <,<=,>,>=,instanceof
+		 *  
+		 *  5.equality operators////////////////
+		 *  
+		 *  ==,!=
+		 *  
+		 *  6.bitwise operators/////////////////
+		 * 
+		 *  &
+		 *  |
+		 *  ^
+		 *  7.short circuit || logical operators//////////
+		 *  
+		 *  &&
+		 *  ||
+		 *  
+		 *  8.conditional operator || ternary ////////////
+		 *  
+		 *  expression ?true :false
+		 *  
+		 *  9.assignment operators
+		 *  =,+=,-=,*=,/=......
+		 *  
+		 *  There is no order of operands. they all will be evaluated first  left to right before
+		 *  EVALUATION OF operators
+		 * 
+		 */
+		
+		System.out.println(m1(1)+m1(2)*m1(3)/m1(4)+m1(5)*m1(6));//32
+		
+	}
+	public static int m1(int i) {
+		System.out.println(i);
+		return i;
+	}   
+}
