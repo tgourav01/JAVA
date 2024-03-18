@@ -1,0 +1,55 @@
+package JAVA;
+
+public class Operators15NewNewInstanceInstanceofIsinstance {
+
+	public static void main(String[] args)throws Exception {
+	       Object o=Class.forName(args[0]).newInstance();
+	       System.out.println("object created for"+o.getClass().getName());
+		
+	       //•CASE1:
+	       
+	       //whatever is  passed at time of running in cmd it will created its object
+	       
+	       //it will created  at the runtime  according to the input class .this cant be done by
+	       //  using new operator
+	       
+	      // new operator is used when we  know the type of the object at the beginning
+	       
+	     //newInstance() call the no argument constructor internally  hence no -arg constructor
+	      //should be contained by the class  otherwise will get RE:instantiation exception
+	       //no need of no arg constructor in new operator
+	       
+	       //•CASE2:
+	       
+	     //while using new operator at runtime if the corresponding  class file is not available 
+	     // then will get RE:NoClassFoundError this is unchecked exception
+	       
+	       
+	      //while using newInstance() at runntime if the corresponding class file is not available
+	       //the we will get runtime exception ClassNotFoundException  this is checked exception
+	       
+	       
+	       					////isInstance() VS instanceof//////
+	       
+	       
+	       Thread t=new Thread();
+	       System.out.println(t instanceof Runnable);//true;
+	       
+	       System.out.println(ClassForName(args[0]).isInstance(t));
+	       //Java Test Runnable  will be true
+	       //Java Test String will be false
+	       
+	       
+	    /* instanceof :is an operator in java we can use instance of to check whether the given 
+	       the given object is of particular type or not and we know the type at the beginning
+	     
+	       isInstance(): is method an method present in Java.lang.Class .We can use isInastance 
+	       method to check whether the given object is a particular type(dynamically)
+	        or not and we don't know  the type at the beginning .It is available dynamically at
+	        runtime.
+	     */ 
+	       
+	       
+	}
+
+}
