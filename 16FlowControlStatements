@@ -1,0 +1,99 @@
+package JAVA;
+
+public class FlowControl16SelectionStatements {
+
+	public static void main(String[] args) {
+		//if else 
+		//CASE1:
+		boolean a=true;
+		if(a) {//a should be of boolean type
+			
+			System.out.println("if-block");//executed
+		}
+		else {
+			System.out.println("else block");
+		}
+		 int x=0;
+		 
+		 
+		 /*
+		  * CASE 2:
+		  
+		 if(x) {//CE:incompatible types
+				
+				System.out.println("if-block");
+			}
+			else {
+				System.out.println("else block");
+			} 
+		
+		 CASE3:
+			 
+			 if(x=10) {//CE:incompatible types
+					
+					System.out.println("if-block");
+				}
+				else {
+					System.out.println("else block");
+				} */
+		 
+		 	//CASE4:
+			 
+			 if(x==10) {//false x==0
+					
+					System.out.println("if-block");
+				}
+				else {
+					System.out.println("else block");//executed
+				} 
+	
+		 	
+		 //	CASE 5:
+				 
+				 if(a=false) {
+						
+						System.out.println("if-block");
+					}
+					else {
+						System.out.println("else block");//executed
+					} 
+				 
+		//	CASE 6:
+				 
+				 if(a==false) {
+						
+						System.out.println("if-block");//executed
+					}
+					else {
+						System.out.println("else block");
+					} 
+				 
+		//else and curly braces are optional without braces only one statment is allowed under if 
+		// and which should not be declarative
+		//there is no dangling else problem in java every else is mapped to nearest if statement	 
+		 	
+				 
+		//Case1:valid 
+				if(true) 
+					System.out.println("if block");//
+		//Case2:valid 
+				if(true) ;
+		//Case3: not valid 
+				if(true) 
+				int t=10;//we  cant use this t so no logic to allow it will give CE
+		
+		//Case4:valid 
+				if(true) {
+					int y=10;//it can be used further in block		
+					}
+				
+		//case 5:
+				if(true)
+					if(false)
+						System.out.println("nested if");
+				else // it belongs to nearest if which is nested
+					System.out.println("nested else");//executed
+				 
+	}
+
+}
