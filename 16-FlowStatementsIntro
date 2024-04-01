@@ -1,0 +1,24 @@
+package JAVA;
+
+public class FlowControl16intro {
+
+	/*
+	 * it is of three type
+	 * 1.selection statement 
+	 *         •if-else
+	 *         •switch
+	 * 2.iterative statement 
+	 * 			•while
+	 * 			•do-while
+	 * 			•for
+	 * 			•for each
+	 * 
+	 * 3.transfer statement
+	 * 			•break
+	 * 			•continue
+	 * 			•return
+	 * 			•try-catch-finally
+	 * 			•assert
+	 *        
+	 */
+}
