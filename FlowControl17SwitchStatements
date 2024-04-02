@@ -1,0 +1,137 @@
+package JAVA;
+
+public class FlowControl17SwitchCase {
+
+	public static void main(String[] args) {
+		//if several option are available then it is not recommended to use if else 
+		//we should go for switch statements\
+	
+		//EXAMPLE 1:
+		int x=2;
+		
+		switch(x) {
+		case 1:
+			System.out.println("case1");
+			break ;
+		case 2:
+			System.out.println("case2");
+			break;
+		case 3:
+			System.out.println("case3");	
+			break;
+		default :
+			System.out.println("default case");
+		}
+		
+		//CURLY BRACES are mandatory in switch statement else are optional
+	
+		//	EXAMPLE 2:
+	
+		// empty switch is valid 
+		switch(x) {
+		
+		}
+		// EXAMPLE 3
+		//inside switch statement every statement should be under case or default label
+		
+		switch (x) {
+		
+		System.out.println("case2");//invalid CE
+		}
+		
+		// EXAMPLE 4
+		int y=2;
+		switch(x) {
+		case 1:
+			System.out.println("case1");
+			break;
+		case y:// invalid must be constant expresion
+			//if we make y final it will be constant and valid
+			System.out.println("case2");
+			break;
+		default :
+			System.out.println("default");
+			
+		}
+		
+		
+		final int z=2;//valid
+		switch(x) {
+		case 1:
+			System.out.println("case1");
+			break;
+		case y:
+			System.out.println("case2");
+			break;
+		default :
+			System.out.println("default");
+		}
+		
+		//EXAMPLE -5
+		//switch can be expresion but case label should be constant expression
+		
+		switch(x+1) {
+		case 1:
+			System.out.println("case1");
+			break;
+		case 2+3+4://constant expression so valid
+			
+			System.out.println("case9");
+		break;
+		
+		default :
+			System.out.println("default");
+		}
+		
+		//Example 6:
+		//every case label should be in the range of switch argument
+		
+		
+		byte b=10;
+		switch(b){//if switch( b+1) was used it could  had been valid  
+		case 10:
+			System.out.println("case1");
+			break;
+		case 1000://out of range CE:PLP
+			
+			System.out.println("case9");
+		break;
+		
+		default :
+			System.out.println("default");
+		}
+   //Example 7:
+    //duplicate label not allowed
+		
+	int xx=97;
+	switch(xx) {
+	case 97:
+		System.out.println("case1");
+		break;
+	case 'a':
+		System.out.println("case2");
+		break;
+	}
+	
+    //Example 8:
+	//within the switch statement  if any case is matched from that case onwards all statements
+	//will be executed until break or end of switch 
+	//default case will be executed if only no case matched
+	// we can write defualt case anywhere but it is recommended to write as last case
+	
+	switch(x) {
+	case 0:
+		System.out.println("case1");
+		
+	case 1:
+		System.out.println("case2");
+		break;
+	case 2:
+		System.out.println("case3");
+	default :
+		System.out.println("default");
+	}
+    	
+	}
+
+}
