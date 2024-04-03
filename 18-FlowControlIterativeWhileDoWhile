@@ -1,0 +1,203 @@
+package JAVA;
+
+public class FlowControl18InterativeWhileDowhile {
+
+	public static void main(String[] args) {
+		//if we dont know the number of iteration in advance then we should go for while loop
+		
+		/*
+		 example :
+		 while(q.size()!=0)
+		 */
+		
+		/*
+		 SYNTAX:
+		
+		while(b) b should be boolean {
+			// body
+		}
+		//CE:incompatible type
+		while (1){
+		body}
+		
+		CASE1:valid
+		
+		while(true)
+		sop("hi");
+		
+		CASE2:valid
+		
+		while(true)
+		; beacause ; is empty statement
+		
+		CASE3: not valid
+		
+		while(true)
+		int x=10;//no declarative statement as it cant be used
+		
+		CASE4:valid
+		
+		while(true){
+		int x=10
+		}
+		
+		CASE5: no  valid
+		CE:unreachable
+		
+		while(true){
+		sop("hello");
+		}sop("hi"); not reachable because of true infinite loop
+		
+		CASE6: not valid
+		CE:unreachable {
+		
+		while(false){ beacuse it false loop cant be reachable so no logic to compile it 
+		sop("hello");
+		}sop("hi");
+		
+		CASE7:valid
+		
+		int a=10,b=20;
+		while(a<b){
+		sop("hello");
+		}sop("hi");
+		
+		o/p:infinite hello
+		
+		
+		CASE8:valid
+		
+		int a=10,b=20;
+		while(a>b){
+		sop("hello");
+		}sop("hi");
+		
+		o/p: hi
+		
+		
+		CASE9: not valid
+		CE:unreachable because  a<b is true :final variable are replaced at compile time and also final 
+		variable operation also computed at compile time .
+	
+		
+		final int a=10,b=20;
+		while(a<b){
+		sop("hello");
+		}sop("hi");
+		
+	CASE10: not valid
+		CE:unreachable because  a>b (final variables )is false  and no need to write loop
+		which is not reachable
+	
+		
+		final int a=10,b=20;
+		while(a<b){
+		sop("hello");
+		}sop("hi");
+		
+		
+		////////////////////do-while//////////////////
+		 if we want to execute loop for atleast once then we should go for do while loop
+		 
+		 SYNTAX:
+		 do{
+		 body}while(b);  b should be boolean curly braces are optional 
+		 ; is mandatory 
+		 
+		 
+		 CASE1:valid  
+		 do 
+		 sop("hello");
+		 while(true);
+		 
+		 CASE2:valid  
+		 do 
+			;
+		 while(true);
+		 
+		 CASE3: not valid  
+		 do 
+		 int x=10; can't be used
+		 while(true);
+		 
+		 CASE4:valid  
+		 do {
+		 int x=10;}
+		 while(true);
+		 
+		CASE5: not valid  because of no body
+		 do 
+		 while(true);
+		 
+		 CASE6:valid  
+		 do 
+		 	while(true); while and its body is one single statement and also do executed so no unreachable
+		 		sop("hello");
+		 while(false);
+		 
+		 CASE7: not  valid  
+		 CE:unreachable
+		 
+		 do {
+		 sop("hello");//infinite
+		 }while(true);
+		 sop("hi");//unreachable
+		 
+		 CASE8:  valid  
+		 do {
+		 sop("hello");
+		 }while(false);
+		 sop("hi");
+		 
+		 o/p:hello
+		 	 hi
+		 	 
+		 CASE 9:valid
+		 
+		 int a=10,b=20;
+		 do{
+		 sop("hello")
+		 }while(a<b); variable and goes into runtime and runs infinite
+		 sop(hi);
+		 
+		 o/p:infinite hello 
+		 
+		  CASE 10:valid
+		  
+		 int a=10,b=20;
+		 do{
+		 sop("hello")
+		 }while(a>b); 
+		 sop(hi);
+		 
+		 o/p:hello
+		 	 hi
+		 
+		 
+		  CASE 11: not valid beacuse of final variable computation  ate compile time 
+		 CE:not reachable
+		 final int a=10,b=20;
+		 do{
+		 sop("hello")
+		 }while(a<b); computed as true;
+		 sop(hi);not reachable
+		 
+		 o/p:infinite hello 
+		 
+		 
+		  
+		  CASE 12:valid
+		  
+		final int a=10,b=20;
+		 do{
+		 sop("hello")
+		 }while(a>b); //computed as false on compile time
+		 sop(hi);
+		 
+		 o/p:hello
+		 	 hi
+		*/
+
+	}
+
+}
