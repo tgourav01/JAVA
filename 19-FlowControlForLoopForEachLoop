@@ -1,0 +1,224 @@
+package JAVA;
+
+public class FlowControl19ForLoopForEachLoop {
+
+	public static void main(String[] args) {
+		//for loop is most used loop it java
+		 // if we know the iteration in advance for loop is best choice
+		//syntax
+		/*
+		 for(initialization ;conditional check;increment/decrement){
+		 loop body;
+		 }
+		 
+		 curly braces are optional and witjout it only one statement is allowed which should
+		 not be declarative statement
+		 
+		 case 1:valid
+		 
+		 for(int i=1;i<10;i++)
+		 sop("hi");
+		 
+		  case 2:valid
+		 
+		 for(int i=1;i<10;i++) ;empty statment
+		 
+		 case 3: not valid
+		 
+		 for(int i=1;i<10;i++)
+		 int x=10;
+		 
+		 /////////////////IITIALIZATION SECTION/////////
+		
+		•it will be executed only once in loop life cycle.
+		•here we can declare  local variable for loop
+		•here we can declare any number of variable but of same datatype  only
+		 
+		 CASE1:valid
+		 int i=0,j=0;
+		 
+		 CASE2:not valid
+		 •int i=0,String s="durga";
+		 •int a=10,int j=0;
+		 
+		 
+		 CASE3:
+		 int i =0;
+		 
+		 for(sop("hello");i<3;i++){
+		 sop("hi");}
+		 
+		 o/p:   hello 
+		 		hi 
+		 		hi 
+		 		hi
+		 	in  initialization 	 we can take any valid java statement including sop
+		 		
+		///////////////////CONDITIONAL CHECK /////////////// 		
+		 		
+		 •here we can take any valid java expression but should be of boolean type
+		 •this part is optional if we not taking anything then compiler will always place true;
+		 	
+		 	for(int i; ;i++){
+		 	}
+		 	
+		 	/////////////////INCREMENT/DECREMENT////////////
+		 	
+		 	in increment /decrement we can take any valid  java statement including sop
+		   int i=0;
+		   for(sop("hi" ;i<3;sop("hello")){
+		   		i++;}
+		   		
+		   		#o/p:hi
+		   			hello
+		   			hello
+		   			hello
+		   			
+		   All three parts of for loop are independent of loop are independent of each other and
+		   optional
+		   CASE:valid
+		   
+		   for( ; ;)
+		   sop("hello");//infinite loop
+		   
+		   for(;;);
+		   
+		   CASE1:
+		   
+		   for(int i=0;true;i++){
+		   sop("hello");}
+		   sop(hi);
+			CE:unreachable statement
+			
+			CASE2:
+			 for(int i=0;false;i++){
+		   sop("hello");} // 
+		   sop(hi);
+			CE:unreachable statement {
+			
+			CASE3:
+			
+			for(int i=0; ;i++){
+		   sop("hello");} // 
+		   sop(hi);
+		   
+		   CE:unreachable statement
+		   
+		   CASE 4:
+		   int a=10,b=20;
+		   
+			for(int i=0;a<b ;i++){
+		   sop("hello");} // 
+		   sop(hi);
+		   
+		   #hello
+		    hello
+		    
+		   CASE 5:
+		   int a=10,b=20;
+		   
+			for(int i=0;a>b ;i++){
+		   sop("hello");} // 
+		   sop(hi);
+		   
+		   #hii
+		  
+		   CASE 6:
+		   final int a=10,b=20;
+		   
+			for(int i=0;a<b ;i++){
+		   sop("hello");} // 
+		   sop(hi);
+		   
+		   # CE:unreachable statement 
+		   
+		   CASE 7:
+		   final int a=10,b=20;
+		   
+			for(int i=0;a>b ;i++){
+		   sop("hello");} // 
+		   sop(hi);
+		   
+		   CE:Unreachable statement {
+		
+		
+		
+		////////////// For -each loop//////////
+		 * 
+		 •it is specially  designed lopp to retrieve elements of arrays and collections
+		 •limitation of this is it is only applicable for Array and collections
+		 
+		 
+		 CASE1:1D array traversal 
+		 
+		 int []arr={1,2,3,4};
+		 
+		 normal loop 							|			 for each loop
+		 										|			
+		 for(int i=0;i<arr.length;i++)			|			 for(int e:arr)
+		  sop(arr[i]);							|			   sop(e);
+		 										|
+		
+		 
+		 CASE2:2D array traversal
+		 int [][]arr={{1,2,3},{4,5,6}}
+		 
+		 normal loop 							|			 for each loop
+		 										|			
+		 for(int i=0;i<arr.length;i++)			|			 for(int[] arr1:arr)
+		  for int(j=0;j<arr[0].length;j++)		|			  for(int e:arr1)
+		   sop(arr[i][j]);						|			 	sop(e);
+		 										|
+		
+		
+		CASE3:3D array
+		
+		   int[][][] arr = {						
+            { {1, 2}, {3, 4} },						  
+            { {5, 6}, {7, 8} }							
+        	};												
+														
+   													
+   for (int i = 0; i < arr.length; i++) {			|for(int[][]arr1:arr)
+     for (int j = 0; j < arr[i].length; j++){		| for(int[]arr2:arr1)
+       for (int k = 0; k < arr[i][j].length; k++){	|  for(int e:arr2)
+            System.out.print(arr[i][j][k] );		|   sop(e);
+              }										|
+           }
+        }
+		 
+		 
+		////////////// LIMITATION OF FOR EACH LOOP///////////
+		 
+		 
+		 for(int i=0;i<10;i++)
+		 sop(i);
+		 
+		 for (int i=arr.length;i>0;i--)
+		 sop(i);
+		 
+		 all above  functionality can't be reached by for each loop
+		 
+		 
+		 ////////////Iterable Interface////////
+		  * 
+		  for(each x:target)
+		   target should be an iterable object which mean corresponding class  of object should 
+		   implement iterable interface
+		   
+		   collection implements iterable interface 
+		   so list,set,queue all implements iterable 
+		   
+		   iterbale contains only one method 
+		   public Iterator iterator()
+		 */
+		
+
+        				
+        					
+    						  
+								
+    
+	}
+
+}
