@@ -1,0 +1,107 @@
+package JAVA;
+
+public class DeclarationAccessModifiers21JavaSourceFile {
+
+	/////////////////////////JAVA SOURCE FILE///////////////////////////
+	
+	// A java program can contain any number of classes but utmost 1 class can be declared
+	// as public  if there is a public class then the  name of the program and name of the public
+	//class must be matched otherwise we will get CE
+
+	/* CASE1
+	 if  there is no public class then we can use any name and there are no restriction 
+     
+     CASE2
+     if class B is public then name of program should be B.java
+     otherwise we will get CE:B is public,should be declared in a file name B.java
+     
+     CASE3: we can't declare more than 1 class public in a program(source file)
+     if class B and C declared as public and name of the program is B.java then we will get 
+     CE:C is public should be decalred in file name C.java 
+     
+        EXAMPLE:
+        
+        in file durga.java
+        
+        class A{
+        public static void main (String args[]){
+        System.out.println( A main method );
+        }}
+        
+         class B{
+        public static void main (String args[]){
+        System.out.println( B main method );
+        }}
+        
+         class C{
+        public static void main (String args[]){
+        System.out.println( C main method );
+        }}
+        
+         class D{
+        public static void main (String args[]){
+    
+        }}
+        
+        
+        after compiling we will get 4 separate class file as A.class B.class C.class D.class
+        we can run these file
+        java A will be give output:A main method
+        
+        java B will be give output:B main method
+        
+        java C will be give output:C main method
+        
+        java D will be give RE:NoSuchMethodError(because jvm looks for main method)
+        
+        java Durga RE:NoClassDefFoundError:Durga
+        
+        
+        CONCLUSIONS:
+        
+        1. whenever we are compiling  a java program for every class present in the program
+        a separate class file will be generated
+        
+        2.we can compile a java program (java source file)but we can run only a java.class file
+        
+        3.whenever we are executing a java class the corresponding main() will be executed
+        if the class doesn't contain main() the we will getCE:NoSuchMethodError:main
+        
+        4.if the corresponding .class file is not available then we will get RE:NoClassDefFoundError:
+         
+        5. It is not recommended to declare multiple classes in a single source file.
+        	It is highly recommended to declare only one class per source file and name of the 
+        	program we  have to keep same as class name.The main advantage of this approach is
+        	readability and maintainability will be improved.
+        	
+        	////////////////IMPORT STATEMENT/////////
+        	
+        class Test{
+         
+        public static void main (String args[]){
+        ArrayList i=new ArrayList();
+                }
+        }
+        CE:can not find symbol
+        symbol: class ArrayList
+        location:class Test
+        
+        we can solve this problem by using fully qualified name  like this:
+        
+        java.util.ArrayList i=new java.util.ArrayList();
+        but every time we use it will increase length of code and reduce readability
+        
+        we can solve this problem by using import statement like this:
+        
+        import java.util.ArrayList;
+        class Test{
+        }
+        now we don't need to use fully qualified name we can use short  names.
+        
+         
+        
+        
+        	
+        
+	 */
+}
