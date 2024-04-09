@@ -1,0 +1,128 @@
+package JAVA;
+
+public class DeclarationAcessModifiers22importStaticimport {
+
+  	////////////////IMPORT STATEMENT/////////
+	
+   /* class Test{
+     
+    public static void main (String args[]){
+    ArrayList i=new ArrayList();
+            }
+    }
+    CE:can not find symbol
+    symbol: class ArrayList
+    location:class Test
+    
+    we can solve this problem by using fully qualified name  like this:
+    
+    java.util.ArrayList i=new java.util.ArrayList();
+    but every time we use it will increase length of code and reduce readability
+    
+    we can solve this problem by using import statement like this:
+    
+    import java.util.ArrayList;
+    class Test{
+    }
+    now we don't need to use fully qualified name we can use short  names.
+    
+    
+          ////Types of import statements///////
+         1.explicit class import
+         2.implicit class import
+         
+     1:EXPLICIT CLASS IMPORT:
+     it is highly recommended to use explicit class import because it improves readability 
+     code.best suitable when readability is imporatant
+     e.g.:import java.util.ArrayList;
+     
+     2.IMPLICIT CLASS IMPORT:
+      it is not recommended  to use because it reduces readability of the code
+      e.g.: import java.util.*;
+      
+     Case1:
+     class MyObject extends java.util.UnicastRemoteObject{
+     } 
+      in this case code compile fines as we use fully qualified name  no need of import statement
+   
+     CASE2:
+     import java.util.*;
+     import java.sql.*;
+     class Test{
+      p s v main(Strings []agrs){
+      Date d=new Date();
+     }}
+     
+     CE:reference to date is ambiguous 
+     this CE occurr beacuse both util and sql contains Date class.
+     it can also occurr in using List class because it present in  util and awt.
+     
+     
+     CASE3:
+     Precedence order of resolving classes:
+     1.explicit class import
+     2.Classes present in Current Working Directory(same package)
+     3.Implicit class import
+     e.g.:
+     import java.util.Date;
+     import java.sql.*;
+     class Test{
+      p s v main(Strings []agrs){
+      Date d=new Date();
+     }}
+     
+     it will take the util Date class 
+     
+     CASE 4:
+     whenever we are importing a java package all classes and interface present in the package
+     by default available but  not the sub package classes & interface .
+     Compulsory we should write import statement until sub package level.
+     
+     for e.g
+     import java.*;not valid 
+     import java.util.*;not  valid
+     import java.util.regex .*-- this is valid -- to use sub package classes of util regex
+    
+    
+    CASE 5:
+    All classes & interface present in the following  packages  are by default available 
+    to every java program hence no need to import
+    
+    1.java.lang package
+    2.default package(CurrentWorkingDirectory)
+    
+    CASE 6:
+    import statement is totally compile time related more number of imports then more will be
+    the compile time but there is no effect on execution time(runtime).
+    
+    CASE 7:
+    
+    #include <stdio.h> in c  include all i.o header file will be loaded at the beginning only
+    hence static include
+    
+    in case of java import statement no class file is loaded at the beginning  .whenever  we are
+    using a particular class only corresponding class file will be loaded .this is like dynamic
+    include or load on demand or load on fly.
+    
+    
+   ////////////////////////---STATIC IMPORT---////////////////////
+    
+     introduce in 1.5:in 1.5 there are lot hero features introduced but it is only flop feature
+      not recommended to use .
+      
+     by using static import we can access static member  directly without using class name .
+     
+     EXAMPLE:
+     
+     Without static import         ||         import static java.lang.Math.sqrt
+     							   ||    	  import static java.lang.Math.*
+     Class Test{				   ||         Class Test{
+     p s v main(Stirng []args){     ||            p s v main(Stirng []args){
+     							   ||
+     sop(Math.sqrt(4);			   ||           sop(sqrt(4);
+     sop(Math.min(10,20);          ||           sop(min(10,20);
+     }                             ||          }
+     } 							   ||       }
+    
+     */
+}
