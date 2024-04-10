@@ -1,0 +1,146 @@
+package JAVA;
+
+public class DeclarationAccessModifiers23StaticImport {
+/*
+////////////////////////---STATIC IMPORT---////////////////////
+    
+introduce in 1.5:in 1.5 there are lot hero features introduced but it is only flop feature
+not recommended to use .
+
+by using static import we can access static member  directly without using class name .
+
+EXAMPLE:
+
+Without static import          ||         import static java.lang.Math.sqrt
+				               ||    	  import static java.lang.Math.*
+Class Test{				       ||         Class Test{
+p s v main(Stirng []args){     ||            p s v main(Stirng []args){
+				   ||
+sop(Math.sqrt(4);			   ||           sop(sqrt(4);
+sop(Math.min(10,20);           ||           sop(min(10,20);
+}                              ||          }
+} 							   ||       }
+
+
+          //////////////////////////--System.out.println()--///////////////////
+ CASE1:
+ 
+ class Test{
+  static String s="java";
+  }
+  Test.s.length();
+  
+  1.Test - is the class name.
+  2.s - is the static variable present in test class of type java.lang.String
+  3.length()- is a method present is String class.
+  
+  class System{
+   static PrintStream out;
+  }System.out.println();
+  
+  1.System- is the class name.
+  2.out - is the static variable present in test class System of the type Print Stream .
+  3.println() -  It is the method present in the print stream class.
+  
+  
+ Out is a static variable present in System class hence we can access by using class name system
+ but whenever are writing static import it is not required to use class and we can access out 
+ directly.
+
+
+import static java.lang.System.out;
+class Test{
+     p s v main(main[] args){
+     out.println("hello");
+     out.println("hi");}
+     }
+ }
+ 
+ CASE  2:
+ 
+ import static java.lang.Integer.*;
+ import static java.lang.Byte.*;
+class Test{
+     p s v main(main[] args){
+     System.out.println(MAX_VALUE);
+     }}
+     
+     CE:reference to MAX_VALUE is ambiguous.
+  
+ CASE3:
+ 
+ Resolving static member compiler will always  consider of precedence in following :
+ 1.Current class Static member.
+ 2.Explicit Static import.
+ 3.Implicit  Static import.
+ 
+ 	import static java.lang.Integer.MAX_VALUE;   ----------2
+ 	import static java.lang.Byte.*;
+class Test{
+		static int MAX_VALUE=999;         -----------------1
+     p s v main(main[] args){
+     System.out.println(MAX_VALUE);
+     }}
+   
+ // o/p:999;
+ // if comment line 1 we will get Integer.MAX_VALUE.
+ // if comment line 1 and 2 we will get Byte.MAX_VALUE. 
+ 
+  CASE 4:
+  
+  Normal Import Syntax:
+  1.Explicit import:
+  
+  import packagename.classname;
+  e.g.import java.util.ArrayList;
+  
+  2.Implicit import 
+  import package name.*;
+  e.g. import java.util.*;
+  
+    Static import Syntax:
+  1.Explicit  static import:
+  
+  import static  packagename.classname.static member;
+  e.g.import static java.lang.Math.sqrt;
+      import  static java.lang.System.out;
+  
+  2.Implicit static  import 
+  import packagename.classname.*;
+  e.g. import static  java.lang.Math.*;
+       import static  java.lang.System.*;
+ 
+ CASE 5:
+ normal import    VS    static import
+ 
+ 1.Two packages contains a class or interface with same name is very  rare and hence
+   ambiguity problem is also in normal import.But two classes or interface contains
+   variable of method with same is very common and hence ambiguity problem is very 
+   common and hence ambiguity problem  is very common problem in static import.
+   
+ 2.Usage of static import reduces readability and creates confusion and hence if there is no
+ specific requirement then it is not recommended to use static import.
+ 
+  • we can use normal import to import classes and interface of particular package
+  whenever we can using normal import it is not required to use fully qualified name we
+  can use short name directly.
+  
+  • we can use static import to import static members of a particular class or interface whenever
+  we are writing static import it is not required to use class name to access static member
+  we can access directly.
+  
+  Q.which of the following import statement are correct?
+ 
+  •import java.lang.Math.*;                not valid
+  •import static java.lang.Math.*;         valid
+  •import java.lang.Math.sqrt;			   not valid
+  •import static java.lang.Math.sqrt();    not valid
+  •import java.lang.Math.sqrt.*;           not valid
+  •import static.lang.Math.sqrt;   		   valid
+  •import java.lang;					   not valid
+  •import static java.lang;				   not valid
+  •import java lang.*;				       valid 	  
+  •import static java.lang.*;			   not valid 
+  
+*/
+}
