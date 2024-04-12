@@ -1,0 +1,87 @@
+package JAVA;
+
+public class DeclarationAccessModifiers24Package {
+ /*
+    • It is an encapsulation mechanism to group related classes and interfaces into a single unit.
+     for e.g database classes and interface are in single package java.sql
+     
+    • The main advantage of package are :
+     1.To resolve naming conflict
+     2.It improves modularity of the application.
+     3.It improves the maintainability of the application.
+     4.It provides a security for our components.( access outside package type)
+     
+    • There is one universally accepted naming convention for packages :
+        to use Internet domain name in reverse
+        com.icicibank.loan.housing.Account
+      
+      1.com.icicibank:client Internet domain name in reverse.
+      2.loan:Module name
+      3.housing:sub module
+      4.Account :class name 
+      
+    •Files can be compiled as:
+       
+       Test.java source file
+       
+    package com.durga.scj;
+    public class Test{
+    p s v main(String []args){
+    sop("hello");
+    }
+    }
+    
+    1.javac Test.java will generate the class file in current working directory.
+    
+    2.javac -d . Test.java will generate the class file in 
+      current working directory/com/durgasoft/scjp/Test
+      
+      if the package doesn't exists the command itself will create the package structure.
+     
+    3  As destination. can be replaced with any directory name for eg if f directory exists then
+       javac -d F: Test.java will generate the class file in 
+      F/com/durgasoft/scjp/Test
+     
+    4 if specified directory not exists for e.g z dont exisits
+     	javac -d Z:Test.java
+      then we will get CE: directory not found z:
+      
+      
+   • At the time of the execution of the file we have to use the fully qualified name for e.g
+      
+      java com.durgasoft.scjp.Test
+      
+    •CONCLUSIONS:
+    1.In any java source file there can be atmost 1 package statement otherwise we will get CE:
+    
+    for e.g:
+    package pack1;
+    package pack2;    
+    public class A{
+    }
+    }
+    CE:class interface or enum expected.
+    
+    2.In any java program teh first non comment line should be package statement(if its available)
+       otherwise we will get CE
+       
+       import java.util.*;
+       package pack1;       ----  CE
+       public class  A{
+       }
+       }
+       
+       CE: class, interface,enum expected
+       
+       
+       
+   //////////    SUMMARY JAVA SOURCE  VALID FILE STUCTURE:////////////////////
+         order as follows
+         
+         package statment ; 		ATMOST 1                      
+      	 import statements ; 		ANY NUMBER 0-N				  
+       	class/enum/interface;		ANY NUMBER 0-N				  
+       															  
+       empty source file is  also valid 
+  */
+}
