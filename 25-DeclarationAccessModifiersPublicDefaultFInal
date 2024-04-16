@@ -1,0 +1,140 @@
+package JAVA;
+
+public class DeclarationAccessModifiers25PublicFinalDefault {
+
+	/*
+	   whenever we are writing our own classes we have to provide some information about
+	   our class to the JVM like:
+	   1.whether this class can be accessible from anywhere or not.
+	   2.whether child class creation is possible or not.
+	   3.whether object creation is possible or not.
+	   we can specify this information  by using appropriate modifiers
+	   
+	   
+	   
+	   The only applicable modifiers for TOPL -LEVEL classes are :
+	   1.public
+	   2.<default>
+	   3.final
+	   4.abstract
+	   5.strict fp
+	   
+	   but for inner classes the applicable modifiers are:
+	    1.public
+	   2.<default>
+	   3.final
+	   4.abstract
+	   5.strict fp
+	   6.private
+	   7.protected
+	   8.static
+	  
+	   CASE1:
+	   
+	   private  class Test{
+	   p s v main(String []args){
+	   sop("hello");
+	   }
+	   }
+	   
+	   CE:modifier private not allowed here .
+	   
+	   CASE2:
+	   in other languages there is term as access specifiers and access modifiers
+	    ACCESS SPECIFIERS        ||      ACCESS MODFIERS
+	    1.public , 2. default    || 1.final 2.abstract 3.static ........
+	    3.private ,4.protected   ||
+	    
+	  •  but in JAVA there is no term like ACCESS SPECIFIERS 
+	    EVERY keyword are considered as ACCESS MODIFIERS only
+	    
+	    
+	    /////////////////-{ PUBLIC CLASSES }-//////////////
+	     
+	     if  a class  declared as public then we can access that class from anywhere 
+	     
+	     package pack1;         ||   package pack2;
+	     class A{  				||   import pack1.A;
+	      p void m1(){		    ||   class B{
+	      sop("hello");			||   p s v main(S []args){
+	     }						||    A obj =new obj();
+	     					    ||     	obj.m1();
+	     					    ||  }
+	     					    ||  o/p:hello
+	     
+	     if class A is not public the while compiling B we will get CE:
+	     pack1.A is not public in pack1 cannot be accessed from outside package.
+	     
+	     /////////////////-{ DEFAULT CLASSES }-//////////////
+	     
+	     if class is declared as default then  we can access that class only within the
+	     current package i.e. from outside package we cannot access.
+	     
+	     default access is also known as package level access
+	     
+	     
+	     /////////////////-{ FINAL MODIFIERS }-//////////////
+	     
+	     final is a modifier applicable for classes ,methods and variables
+	     
+	   ••FINAL METHOD():
+	      
+	      whatever methods parent has by default  available to child through inheritance.
+	      if the child not satisfied with parent ()implementation then child is allowed
+	      to redefine  that method based on its requirement .This Process is overriding.
+	      
+	      if parent class method() is declared as final we can't override that method in child
+	      class because its implementation is final.
+	      
+	      class P{
+	      public void property(){
+	      sop("cash+land+gold");
+	      }
+	      public final void marry(){
+	      sop("subhalakshmi");
+	      }
+	      }
+	      class C extends P{
+	      public void marry(){
+	      sop("isha");
+	      }
+	      }
+	      
+	      CE: marry () in C can not override marry() in P:overridden method is final.
+	      
+	      
+	    ••FINAL CLASS:
+	    	if a class is declared as final we can't extend functionality of that class i.e
+	    	we can't create child class for that class .
+	    	INHERITANCE is not possible for final classes.
+	    	
+	    	 final class P{
+	    	 }
+	    	 class C extends P{
+	    	 }
+	    	 CE:can not inherit from final P
+	    	 
+	   		• EVERY  METHOD () present in final class is always final by default .
+	   		But every variable present inside final class not needed to  be final.
+	   		
+	   	    final class A{
+	   	    static int x=10;
+	   	     p s v main(String []args)
+				{
+				x=777;
+				sop(x);  // 777
+	   	    }
+	       }
+	       
+	       ADVANTAGES of final Keyword is we can achieve security and we can provide unique
+	       implementation.
+	       
+	       Disadvantages  of final keyword is we are missing the key benefits of OOPS:
+	     
+	       1.INHERITANCE  (because of final classes).
+	       2.POLYMORPHISM  (because of final methods).
+	       
+	       Hence if there is no specific requirement  then its not recommended to use final 
+	       keyword.
+	 */
+}
